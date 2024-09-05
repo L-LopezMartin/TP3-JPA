@@ -85,9 +85,6 @@ public class Main {
                             .subtotal(50).build())
                     .build();
             factura1.setCliente(cli1);
-            for (DetalleFactura detFac : factura1.getDetalleFactura()){
-                detFac.setFactura(factura1);
-            }
 
             Factura factura2 = Factura.builder()
                     .fecha("03-09-2024")
@@ -103,9 +100,6 @@ public class Main {
                             .subtotal(300).build())
                     .build();
             factura2.setCliente(cli2);
-            for (DetalleFactura detFac : factura2.getDetalleFactura()){
-                detFac.setFactura(factura2);
-            }
 
             //Persistencia de las entidades
             entityManager.persist(cat1);
