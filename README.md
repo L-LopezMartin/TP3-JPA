@@ -6,6 +6,7 @@
 
 ![image](https://github.com/user-attachments/assets/6b25633f-b7b4-48ac-891c-c3aa794cb16d)
 
+<p>Para implementar la relación de composición entre Factura y DetalleFactura, se reescribió el Builder de Lombok para la clase Factura. Esto fue para que dentro del builder de Factura se pudiera llamar al builder de DetalleFactura y se pudiera guardar la relación de Factura en DetalleFactura. Esto se hizo así porque es el atributo "factura" de Detalle Factura el que es persistido, pero al usar el constructor que provee Lombok no se guarda el atributo.</p>
 <hr></hr>
 <p>El paquete entidades es el que contiene a todas las entidades que van a ser persistidas.</p>
 <p>El paquete org.example contiene el archivo Main.java, donde se instancian las clases y se realiza la transacción para la persistencia</p>
